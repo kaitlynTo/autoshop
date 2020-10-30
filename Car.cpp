@@ -38,7 +38,7 @@ namespace sdds
 		in >> speed;
 		c_topSpeed = stoi(speed);
 	}
-
+	
 	//returns the condition
 	std::string Car::condition() const
 	{

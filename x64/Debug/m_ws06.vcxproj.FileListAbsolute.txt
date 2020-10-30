@@ -1,0 +1,2 @@
+C:\Users\Juyoung Park\Desktop\autoshop\x64\Debug\m_ws06.exe
+C:\Users\Juyoung Park\Desktop\autoshop\x64\Debug\m_ws06.pdb

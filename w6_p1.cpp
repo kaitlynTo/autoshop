@@ -19,7 +19,7 @@ void loadData(const char* filename, sdds::Autoshop& as)
 	{
 		sdds::Vehicle* aVehicle = sdds::createInstance(file);
 		if (aVehicle)
-			as += aVehicle;
+			as += aVehicle; //dynamic object added to Autoshop object
 	}
 }
 
