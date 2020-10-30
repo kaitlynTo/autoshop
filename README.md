@@ -1,5 +1,5 @@
 # autoshop
-An application that simulates an autoshop that sells various types of vehicles
+## An application that simulates an autoshop that sells various types of vehicles
 
 Extracts data of records of a text file if it's valid.
 
