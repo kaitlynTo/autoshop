@@ -54,10 +54,18 @@ namespace sdds
 	//query the vechicle info
 	void Car::display(std::ostream& out)const
 	{
+		string conditionOutput = "";
+		if (c_condition == "n")
+			conditionOutput = "new";
+		else if (c_condition == "u")
+			conditionOutput = "used";
+		else if (c_condition == "b")
+			conditionOutput = "broken";
+		
 		//|MAKER(10)|CONDITION(6)|TOP_SPEED(6(.2))
-		out << setw(10) << maker
-			<< setw(6) << c_condition
-			<< setprecision(2) << setw(6) << c_topSpeed
+		out <<  "| " << setw(10) << maker << " | "
+			<< left << setw(6) << conditionOutput << " | "
+			<< right << fixed << setw(6) << setprecision(2) << (double)c_topSpeed << " |"
 			<< endl;
 	}
 }

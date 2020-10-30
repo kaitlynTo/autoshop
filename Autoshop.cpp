@@ -22,11 +22,14 @@ namespace sdds
 
 	void Autoshop::display(std::ostream& out) const
 	{
-		out << "| Cars in the autoshop! | " << endl;
+		out << "--------------------------------" << endl;
+		out << "| Cars in the autoshop!        |" << endl;
+		out << "--------------------------------" << endl;
 		for (unsigned i = 0; i < m_vehicles.size(); i++)
 		{
 			m_vehicles[i]->display(out);
 		}
+		out << "--------------------------------" << endl;
 	}
 
 }
