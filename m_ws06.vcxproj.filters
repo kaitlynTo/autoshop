@@ -38,6 +38,9 @@
     <ClInclude Include="Autoshop.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Racecar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Car.cpp">
@@ -47,6 +50,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Autoshop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Racecar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
