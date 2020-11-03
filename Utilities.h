@@ -28,14 +28,16 @@ namespace sdds
 
 			if (firstCharacter == "c" || firstCharacter == "C")
 			{
-				return new Car(in); //new dynamic object created
-				                    //must be delete somewhere
+				return new Car(in);
 			}
 			else
 			{
 				return nullptr;
 			}
 		}
-		return nullptr;
+		else
+		{
+			return nullptr;
+		}
 	}
 }

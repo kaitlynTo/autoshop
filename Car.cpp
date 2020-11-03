@@ -8,6 +8,7 @@
 #include <string>
 #include <sstream>
 #include <iomanip>
+#include <exception>
 #include "Car.h"
 #include "trim.h"
 using namespace std;
@@ -19,26 +20,38 @@ namespace sdds
 		string delim = "";
 		string speed = "";
 		int delimAt = 0;
-		
+
 		//MAKER token
 		in >> maker;
 		delimAt = maker.find(",") > 0 ? maker.find(",") : -1;
 		if (delimAt > 0)
 			maker.erase(delimAt, 1);
-		else 
+		else
 			in >> delim;
+
 		//CONDITION token
 		in >> c_condition;
-		delimAt = c_condition.find(",") > 0 ? c_condition.find(",") : -1;
+		delimAt = c_condition.find(",") >= 0 ? c_condition.find(",") : -1;
 		if (delimAt > 0)
 			c_condition.erase(delimAt, 1);
 		else
 			in >> delim;
+
+		if (c_condition.empty() || (c_condition != "n" && c_condition != "u" && c_condition != "b"))
+			throw "Invalid record!";
+
 		//SPEED token
 		in >> speed;
-		c_topSpeed = stoi(speed);
+		try
+		{
+			c_topSpeed = stoi(speed);
+		}
+		catch (std::bad_typeid& id)
+		{
+			cerr<< "Unrecognized record type: [" << id.what() << "]" << endl;
+		}
 	}
-	
+
 	//returns the condition
 	std::string Car::condition() const
 	{
@@ -61,9 +74,9 @@ namespace sdds
 			conditionOutput = "used";
 		else if (c_condition == "b")
 			conditionOutput = "broken";
-		
+
 		//|MAKER(10)|CONDITION(6)|TOP_SPEED(6(.2))
-		out <<  "| " << setw(10) << maker << " | "
+		out << "| " << setw(10) << maker << " | "
 			<< left << setw(6) << conditionOutput << " | "
 			<< right << fixed << setw(6) << setprecision(2) << (double)c_topSpeed << " |"
 			<< endl;
