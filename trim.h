@@ -11,38 +11,20 @@ using namespace std;
 
 namespace sdds
 {
-	//string trim spaces
-	inline string& ltrim(string& s)
-	{
-		//trim whitespaces until it's not whitespace from left hand side
-		for (size_t i = 0; i < s.length() && s[i] == ' '; i++)
-		{
-			if (isspace(s[i]))
-			{
-				s.erase(i, 1);
-				i--;
-			}
-		}
-		//return the trimmed token
-		return s;
-	}
-	inline string& rtrim(string& s)
-	{
-		//trim whitespaces until it's not whitespace
-		for (size_t i = s.length() - 1; i >= 0 && s[i] == ' '; i--)
-		{
-			if (isspace(s[i]))
-			{
-				s.erase(i, 1);
-			}
-		}
-		//return the trimmed token
-		return s;
-	}
 	inline string& trim(string& s)
 	{
-		ltrim(s);
-		rtrim(s);
+		//left side trimming
+		while (s.length() > 0 && s[0] == ' ')
+		{
+			//if string exists and the first character is white space
+			s.erase(0, 1); //erase the whitespace
+		}
+		//right side trimming
+		while (s.length() > 0 && s[s.length() - 1] == ' ')
+		{
+			//if string exists and the last character is white space
+			s.erase(s.length() - 1, 1);
+		}
 		return s;
 	}
 }

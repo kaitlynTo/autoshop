@@ -8,36 +8,12 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <exception>
 #include "Car.h"
-#include "Vehicle.h"
-#include "trim.h"
+#include "Racecar.h"
 using namespace std;
 
 namespace sdds
 {
-	Vehicle* createInstance(std::istream& in)
-	{
-		string str = "";
-		string firstCharacter = "";
-		in >> str;
-		if (!str.empty())
-		{
-			str = str.substr(0, str.find(","));
-			trim(str);
-			firstCharacter = str[0];
-
-			if (firstCharacter == "c" || firstCharacter == "C")
-			{
-				return new Car(in);
-			}
-			else
-			{
-				return nullptr;
-			}
-		}
-		else
-		{
-			return nullptr;
-		}
-	}
+	Vehicle* createInstance(std::istream& in);
 }

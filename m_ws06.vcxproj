@@ -22,6 +22,7 @@
     <ClCompile Include="Autoshop.cpp" />
     <ClCompile Include="Car.cpp" />
     <ClCompile Include="Racecar.cpp" />
+    <ClCompile Include="Utilities.cpp" />
     <ClCompile Include="w6_p2.cpp" />
   </ItemGroup>
   <ItemGroup>

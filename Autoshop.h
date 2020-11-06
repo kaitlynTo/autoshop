@@ -7,6 +7,7 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <list>
 #include "Vehicle.h"
 
 namespace sdds
@@ -15,7 +16,29 @@ namespace sdds
 	{
 		std::vector<Vehicle*>m_vehicles;
 	public:
+		//destructor
+		~Autoshop(); 
+		//template function - that iterates over the vehicles
+		template<typename T> 
+		void select(T test, std::list<const Vehicle*>& vehicles);
 		Autoshop& operator+=(Vehicle* theVehicle);
 		void display(std::ostream& out) const;
 	};
+
+	//select template function definition 
+	template<typename T>
+	void Autoshop::select(T test, std::list<const Vehicle*>& vehicles)
+	{
+		//if 'test'is True,
+		//adds the m_vehicles elements to the 'vehicles'(2nd param)
+		
+		for (auto i = m_vehicles.begin(); i != m_vehicles.end();i++)
+		{
+			if (test(*i))
+			{
+				vehicles.push_back(*i);
+			}
+		}
+		
+	}
 }

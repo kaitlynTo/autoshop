@@ -16,12 +16,8 @@ namespace sdds
 	{
 		//extract Car information first
 		//take the rest of in for m_booster
-		string booster = "";
-		in >> booster;
-		trim(booster);
-		size_t delimAt = booster.find(",");
-		booster.erase(delimAt, delimAt + 1);
-		m_booster = stod(booster);
+		char delim;
+		in >> delim >> m_booster;
 	}
 	void Racecar::display(std::ostream& out)const
 	{
@@ -30,7 +26,7 @@ namespace sdds
 	}
 	double Racecar::topSpeed()const 
 	{
-		return Car::topSpeed() + Car::topSpeed() * m_booster;
+		return Car::topSpeed() * (m_booster + 1);
 	}
 
 }

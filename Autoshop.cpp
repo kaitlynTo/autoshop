@@ -12,9 +12,17 @@ using namespace std;
 
 namespace sdds
 {
+	//destructor
+	Autoshop::~Autoshop() 
+	{
+		for (const auto i : m_vehicles)
+		{
+			delete i;
+		}
+	}
 	Autoshop& Autoshop::operator+=(Vehicle* theVehicle)
 	{
-		
+
 		m_vehicles.push_back(theVehicle);
 
 		return *this;
@@ -28,6 +36,7 @@ namespace sdds
 		for (unsigned i = 0; i < m_vehicles.size(); i++)
 		{
 			m_vehicles[i]->display(out);
+			out << endl;
 		}
 		out << "--------------------------------" << endl;
 	}

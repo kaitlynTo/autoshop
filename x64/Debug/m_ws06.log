@@ -1,35 +1,7 @@
-﻿  Car.cpp
-C:\Users\Juyoung Park\Desktop\autoshop\Car.cpp(26,55): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Juyoung Park\Desktop\autoshop\Car.cpp(34,68): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Juyoung Park\Desktop\autoshop\Car.cpp(64,10): warning C4244: 'return': conversion from 'const size_t' to 'double', possible loss of data
+﻿  Autoshop.cpp
+  Car.cpp
+  Racecar.cpp
+  Utilities.cpp
   w6_p2.cpp
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(50,7): error C2039: 'list': is not a member of 'std'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\sstream(20): message : see declaration of 'std'
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(50,11): error C2065: 'list': undeclared identifier
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(50,12): error C2059: syntax error: 'const'
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(54,23): error C2059: syntax error: '...'
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(59,18): error C2065: 'vehicles': undeclared identifier
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(59,39): error C3536: 'it': cannot be used before it is initialized
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(59,42): error C2065: 'vehicles': undeclared identifier
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(61,5): error C2100: illegal indirection
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(67,2): error C2065: 'vehicles': undeclared identifier
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(72,25): error C2059: syntax error: '...'
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(77,29): error C2065: 'vehicles': undeclared identifier
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(77,29): error C2672: 'begin': no matching overloaded function found
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(78,3): error C2893: Failed to specialize function template 'unknown-type std::begin(_Container &)'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xutility(2097): message : see declaration of 'std::begin'
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(78,3): message : With the following template arguments:
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(78,3): message : '_Container=unknown-type'
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(78,3): error C2784: 'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'unknown-type'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\initializer_list(57): message : see declaration of 'std::begin'
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(77,29): error C2672: 'end': no matching overloaded function found
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(78,3): error C2893: Failed to specialize function template 'unknown-type std::end(_Container &)'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xutility(2107): message : see declaration of 'std::end'
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(78,3): message : With the following template arguments:
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(78,3): message : '_Container=unknown-type'
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(78,3): error C2784: 'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'unknown-type'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\initializer_list(63): message : see declaration of 'std::end'
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(78,3): error C3536: '<begin>$L0': cannot be used before it is initialized
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(78,3): error C3536: '<end>$L0': cannot be used before it is initialized
-C:\Users\Juyoung Park\Desktop\autoshop\w6_p2.cpp(77,37): error C2100: illegal indirection
   Generating Code...
+  m_ws06.vcxproj -> C:\Users\Juyoung Park\Desktop\autoshop\x64\Debug\m_ws06.exe
